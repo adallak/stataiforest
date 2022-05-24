@@ -41,7 +41,7 @@ Isolates anomalies using binary trees.
 {synopt:{opt maxdepth(#)}} The maximum depth the tree can grow. Default is log2(samplesize)  .{p_end}
 {synopt:{opt extlevel(#)}}  Specifies degree of freedom in choosing the hyperplanes for dividing up data ({help iforest##eiforest2018:Haririr and et.al 2018}). 
 Must be smaller than the number of observations n of the data.{p_end}
-{synopt: {opt noHist)}} Whether to plot the histogram for the estimated score .{p_end} 
+{synopt: {opt noHist}} Whether to plot the histogram for the estimated score .{p_end} 
 {synopt: {opt hist_options(#)}} Histogram options {helpb histogram}{p_end} 
 {marker description}{...}
 {title:Description}
@@ -59,10 +59,10 @@ then anomalies are those which have short average path length on the trees.
 {phang2}{cmd:. set seed 15}{p_end}
 
 {pstd}Setup by simulating data from {helpb gendata}{p_end}
-{phang2}{cmd:. gendata,n(600) p(2) type(cluster)}{p_end}
+{phang2}{cmd:. gendata, n(600) p(2) type(cluster)}{p_end}
 
 {pstd} Isolate anomalies chosing ntrees = 100, subsample = 256, extlevel = 1. {p_end}
-{phang2}{cmd:. iforest X1 X2 ,extlevel(1) ntrees(100) subsample(256) theshold(2)}{p_end}
+{phang2}{cmd:. iforest X1 X2 ,extlevel(1) ntrees(100) subsample(256) threshold(2)}{p_end}
 
 {pstd} Return the estimated scores. {p_end}
 {phang2}{cmd:. mat list e(Score)}{p_end}
@@ -78,7 +78,7 @@ then anomalies are those which have short average path length on the trees.
 
 {synoptset 20 tabbed}{...}
 
-p2col 5 20 24 2: Scalar{p_end}
+{p2col 5 20 24 2: Scalar}{p_end}
 {synopt:{cmd:e(N)}} Number of observations{p_end}
 {synopt:{cmd:e(k_vars)}} Number of variables{p_end}
 {synopt:{cmd:e(maxdepth)}} Maximum depth of the tree{p_end}

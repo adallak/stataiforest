@@ -7,7 +7,7 @@ program define iforest_estat
 	local lsub = length(`"`sub'"')
 	
 	if "`sub'" == "metric"{
-		__estat_metric `rest' if e(sample)
+		__estat_metric `rest' //if e(sample)
 	}
 	else {
 		di as err `"unknown subcommand `sub'"'

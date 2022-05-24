@@ -104,7 +104,7 @@ program Estimate, eclass
 //		di as txt "use {bf: -ssc install moremata-} to do that \m"
 		exit 498
 	}
-	
+	//ereturn post, esample(`touse') 
 	mata: r = iForest(1)
 	mata: r.graph = "`nohist'"
 	mata: r.setup("`varlist'", "`touse'",`ntrees', ///
